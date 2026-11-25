@@ -1,0 +1,300 @@
+.header {
+    position: relative;
+    height: 100px;
+    display: flex;
+    align-items: left;
+    justify-content: flex-start;
+    padding-left: 38px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+body {
+    background-color: var(--background);
+}
+
+.background-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/Assets/hero-header/hero5.jpg');
+    background-size: cover;
+    background-position: bottom;
+    z-index: 1;
+}
+
+.text-header {
+    position: relative;
+    z-index: 2;
+}
+
+.Community-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 30px 30px 30px 30px;
+    align-items: flex-start;
+}
+
+
+.Active-members-container {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.Active-post-container {
+    flex: 2;
+    align-items: center;
+    padding: 0px 20px;
+    width: 100%;
+    gap: 10px;
+
+}
+
+.Active-members-text {
+    width: auto;
+    text-align: center;
+    background: linear-gradient(to right, var(--primary), var(--section-background));
+}
+
+.Active-forum-container {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+
+}
+
+.Active-forum {
+    padding-left: 15px;
+    padding-right: 15px;
+    box-shadow: 0 2px 8px var(--primary);
+    background: var(--section-background);
+}
+
+.Active-forum-upper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row;
+}
+
+.line.forum-upper {
+    align-items: center;
+    height: 15px;
+    width: 2px;
+}
+
+.Active-forum-below {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.line.forum-below {
+    width: auto;
+    height: 2px;
+}
+
+
+.Recent-activites-container {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.Recent-activities-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--section-background);
+    padding: 10px 0;
+}
+
+
+.Recent-activities-title .Activity {
+    display: none;
+}
+
+.Recent-activities-title .Activity.active {
+    display: block;
+}
+
+
+.recent-activities {
+    display: none;
+}
+
+.recent-activities.active {
+    display: block;
+}
+
+.Recent-activities-button-container {
+    display: flex;
+
+    justify-content: space-evenly;
+}
+
+.Recent-activities-button-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.icon-button {
+    background: linear-gradient(to right, var(--primary), var(--tertiary));
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-button:hover {
+    background-color: var(--secondary);
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--text);
+}
+
+
+.heart {
+    height: 15px;
+    width: 15px;
+    color: var(--primary)
+}
+
+
+.recent-entry {
+    max-width: 250px;
+    padding: 10px 15px;
+    background-color: var(--background);
+    box-shadow: 0 2px 6px var(--background-50);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-family: var(--font-body);
+    border-left: 5px solid var(--primary);
+    border-right: 1px solid var(--primary);
+    border-top: 1px solid var(--primary);
+    border-bottom: 1px solid var(--primary);
+
+}
+
+
+.recent-text {
+    color: var(--text);
+    font-size: var(--body2);
+}
+
+.Active-container {
+    min-width: 260px;
+    flex: 1;
+    background-color: var(--section-background);
+    border-radius: 12px;
+    padding: 1px 15px 5px 15px;
+    box-shadow: 0 2px 10px var(--background-50);
+    border-bottom: 3px solid var(--primary);
+}
+
+.Active-user-title {
+    text-align: center;
+    background-color: var(--section-background);
+    padding: 5px 0px 20px 0px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Active-user-title h2 {
+    margin-bottom: 6px;
+}
+
+
+.Active-user-box {
+    max-height: 600px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.Active-user {
+    display: flex;
+    align-items: center;
+    background-color: var(--background);
+    padding: 0px 10px 0px 10px;
+    border-radius: 10px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+    border: 2px solid var(--primary);
+}
+
+.Active-user p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.line.active {
+    width: 100%;
+    height: 1px;
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .Community-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Active-post-container {
+        order: 1;
+    }
+
+    .Recent-activites-container {
+        flex-direction: column-reverse;
+        order: 2;
+    }
+
+    .Active-container {
+        order: 3;
+    }
+
+    .Active-forum-below-title h3 {
+        font-size: var(--body);
+    }
+
+    .text-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .background-header {
+        width: 100%;
+    }
+
+    .text-header h1 {
+        text-align: center;
+    }
+
+}

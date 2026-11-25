@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Picverse</title>
+    <link rel="stylesheet" href="submit.css">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="component.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="company">Picverse</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a class="submit-btn" href="submit.html">Submit Art</a>
+        </div>
+
+        <div class="hamburger">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                <path fill-rule="evenodd"
+                    d="M3 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 5.25Zm0 4.5A.75.75 0 0 1 3.75 9h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 9.75Zm0 4.5a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Zm0 4.5a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+                    clip-rule="evenodd" />
+            </svg>
+        </div>
+    </nav>
+
+    <div class="mobile-nav-popup" id="mobileNav">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+        </ul>
+        <div class="popup-submit-btn">
+            <a href="submit.html" class="submit-btn">Submit Art</a>
+        </div>
+    </div>
+
+
+    <div class="background-header"></div>
+
+    <div class="submit-form-wrapper">
+        <form id="submissionForm" class="submit-form">
+            <h3>Submit your art, Show your creation!</h3>
+            <div class="line separator"></div>
+
+            <div class="form">
+                <div class="form-top">
+                    <div class="form-top-left">
+                        <label for="title"><a>Title</a></label>
+                        <input type="text" id="title" maxlength="50">
+                        <label for="description"><a>Description</a></label>
+                        <textarea id="description" maxlength="300"></textarea>
+                    </div>
+
+                    <div class="form-top-right">
+                        <img id="preview" src="/Assets/example.jpg" alt="" class="preview" />
+
+                        <div class="submit-button">
+                            <label for="fileUpload" class="upload-btn"><a>Upload</a></label>
+                            <input type="file" id="fileUpload" accept=".png,.jpg,.jpeg,.gif,.webp" hidden>
+                        </div>
+                        <p>Max. Size : 10mb, Format: .png, .jpeg, .webp, .gif</p>
+                    </div>
+
+                </div>
+                <div class="form-bottom">
+
+                    <label><a>Tags</a></label>
+                    <div class="tags">
+                        <div class="tag art" data-tag="Furries">Furries</div>
+                        <div class="tag art" data-tag="Anime">Anime</div>
+                        <div class="tag art" data-tag="Painting">ABBAA</div>
+                    </div>
+
+
+                    <label><a>Is this artwork generated from AI?</a></label>
+                    <div class="ai-check">
+                        <label><input type="radio" name="ai" value="yes"> Yes</label>
+                        <label><input type="radio" name="ai" value="no"> No</label>
+                    </div>
+
+                    <label for="email"><a>Email Address</a></label>
+                    <input type="email" id="email">
+                </div>
+                <div id="errorMsg" class="error"></div>
+                <button type="submit">Publish</button>
+            </div>
+
+
+        </form>
+    </div>
+
+    <div class="footer">
+        <div class="footer-text">
+            <p>©Picverse. All rights reserved</p>
+        </div>
+    </div>
+    <script src="submit.js"></script>
+
+</body>
+
+</html>
