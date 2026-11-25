@@ -1,0 +1,385 @@
+.header {
+    position: relative;
+    height: 100px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 38px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.background-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/Assets/hero-header/hero6.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background-50);
+    z-index: 2;
+}
+
+html,
+body {
+    background-color: var(--background);
+    height: 100%;
+    margin: 0;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1;
+}
+
+.text-header {
+    position: relative;
+    z-index: 2;
+}
+
+.tags-frame {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 88.5px;
+    background-color: var(--background);
+    width: auto;
+    height: auto;
+}
+
+.tags-title {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.tags-title-separator .horizontal-line {
+    width: auto;
+    height: 1px;
+    background-color: var(--primary);
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: flex-start;
+    padding: 15px 0px;
+}
+
+.toggle-tag a {
+    display: flex;
+    padding: 20px 4px;
+}
+
+.gallery-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    background-color: var(--background);
+    padding: 20px;
+}
+
+.gallery-placeholder {
+    text-align: center;
+    color: var(--text);
+    padding: 40px 0;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-group {
+    display: none;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    padding: 0px 50.5px 100px 50.5px;
+}
+
+.gallery-item {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: var(--section-background);
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+@media screen and (min-width: 769px) {
+    .image-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, var(--background-50), transparent);
+        padding: 10px;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .gallery-item:hover .image-overlay {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .text-header {
+        width: 100%;
+    }
+
+    .text-header h1 {
+        text-align: center;
+    }
+
+    .tags-title {
+        width: 100%;
+        text-align: center;
+    }
+
+    .tags-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .gallery-group {
+        display: none;
+        flex-direction: column;
+        gap: 50px;
+        justify-content: center;
+        padding: 0px 20px 50px 20px;
+    }
+
+    .gallery-item {
+        width: 200px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 12px;
+        background-color: var(--section-background);
+        cursor: pointer;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .image-overlay {
+        position: static;
+        background: none;
+        opacity: 1;
+        padding: 8px 0 4px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .image-overlay .artist {
+        margin: 0;
+    }
+
+    .gallery-item:hover .image-overlay {
+        opacity: 1;
+    }
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-50);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-content {
+    background-color: var(--section-background);
+    padding: 20px 20px;
+    border-radius: 10px;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid var(--primary);
+}
+
+.modal-body {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+.modal-left {
+    flex: 1;
+    max-width: 1000px;
+}
+
+.modal-left img {
+    max-width: 100%;
+    max-height: 400px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.modal-right {
+    height: 100%;
+    max-height: 100%;
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    word-break: break-word;
+}
+
+.modal-right-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.modal-right-meta-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-width: 100%;
+}
+
+#modal-description {
+    text-align: center;
+    margin-top: 40px;
+    line-height: 1.6;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    color: var(--text);
+}
+
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 0;
+        background-color: var(--section-bg);
+        border: 2px solid var(--primary);
+    }
+
+    .image-overlay{
+        padding: 10px;
+    }
+    .image-overlay h3{
+        font-size : var(--body)
+    }
+    .modal-body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .modal-left {
+        width: 100%;
+        max-height: 300px;
+        overflow: hidden;
+    }
+
+    .modal-left img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .modal-right {
+        width: 100%;
+        gap: 0px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .modal-right-meta {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+    }
+
+    .modal-right-meta p {
+        margin: 3px;
+    }
+
+    .modal-right-meta-description {
+        height: 100px;
+    }
+
+    .modal-right-meta-description p {
+        text-align: left;
+    }
+
+    #modal-description {
+        text-align: center;
+        margin-top: 10px;
+        line-height: 1.6;
+    }
+
+    .modal-text p {
+        text-align: center;
+        padding: 10px 0px;
+    }
+
+    .close {
+        position: absolute;
+        top: 12px;
+        right: 16px;
+
+        color: var(--text);
+        cursor: pointer;
+    }
+}

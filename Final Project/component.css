@@ -1,0 +1,374 @@
+/* Navbar */
+body,
+h1,
+h2 {
+    margin: 0;
+}
+
+.hamburger {
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    position: sticky;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background);
+    padding: 10px 40px;
+    top: 0px;
+    z-index: 100;
+
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 48px;
+    margin: 0;
+    padding: 0 0 0 100px;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    padding: 8px 5px;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.submit-btn {
+    border-radius: 20px;
+    padding: 8px 25px;
+    margin-top: 0px;
+
+    background: linear-gradient(to right, var(--primary), var(--tertiary));
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: var(--body);
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+
+}
+
+.user-icon {
+    font-size: 20px;
+    color: var(--text);
+}
+
+.company {
+    color: var(--text);
+    font-family: 'Leckerli One', cursive;
+    font-size: 20px;
+
+}
+
+
+/*Button*/
+
+button {
+    padding: 12px;
+    background: linear-gradient(to right, var(--primary), var(--tertiary));
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: var(--body);
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover {
+    background-color: var(--secondary);
+}
+
+/*Tag*/
+.tag {
+    border: 2px solid var(--primary);
+    border-radius: 10px;
+    padding: 0px 40px;
+    color: var(--text);
+    background-color: var(--section-background);
+    transition: background-color 0.3s;
+}
+
+.tag:hover {
+    background-color: var(--primary);
+    color: var(--background);
+}
+
+.toggle-tag {
+    border: 2px solid var(--primary);
+    border-radius: 10px;
+    padding: 0px 40px;
+    color: var(--text);
+    background-color: var(--section-background);
+    cursor: pointer;
+}
+
+.toggle-tag.active {
+    background-color: var(--primary);
+    color: var(--text);
+
+    transition: all 0.2s ease;
+}
+
+.mobile-nav-popup {
+    display: none;
+}
+
+
+
+/*footer*/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--section-background);
+    padding: 5px 10px;
+    height: auto;
+    bottom: 0px;
+}
+
+.footer-text {
+    width: 100%;
+    text-align: center;
+}
+
+/*line*/
+.line {
+    background-color: var(--primary);
+}
+
+@media screen and (max-width: 768px) {
+
+
+    .nav-links,
+    .nav-actions {
+        display: none;
+    }
+
+    .submit-btn {
+        border-radius: 20px;
+        padding: 8px 25px;
+        margin-top: 0px;
+
+        background: linear-gradient(to right, var(--primary), var(--tertiary));
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        color: var(--text);
+        font-family: var(--font-body);
+        font-size: var(--body2);
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+
+    .navbar {
+        display: flex;
+        position: sticky;
+        padding: 0px 15px 0px 15px;
+        height: 70px;
+        top: 0px;
+        width: auto;
+        max-width: 768px;
+        overflow: visible;
+        z-index: 100;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        color: var(--text);
+    }
+
+    .hamburger svg {
+        width: 30px;
+        height: 30px;
+    }
+
+
+    .tag {
+        border: 2px solid var(--primary);
+        width: 100px;
+        border-radius: 10px;
+        text-align: center;
+        padding: 0px 20px;
+        color: var(--text);
+        background-color: var(--section-background);
+        transition: background-color 0.3s;
+    }
+
+    .tag a {
+        width: 100%;
+    }
+
+    .tag:hover {
+        background-color: var(--primary);
+        color: var(--background);
+    }
+
+    .toggle-tag {
+        border: 2px solid var(--primary);
+        border-radius: 10px;
+        padding: 0px 40px;
+        color: var(--text);
+        background-color: var(--section-background);
+        cursor: pointer;
+    }
+
+    .toggle-tag.active {
+        background-color: var(--primary);
+        color: var(--text);
+
+        transition: all 0.2s ease;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--section-background);
+        height: 10px;
+        width: 100%;
+
+    }
+
+    .mobile-nav-popup {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: var(--background);
+        z-index: 99;
+        padding: 20px;
+        border-radius: 0 0 10px 10px;
+        animation: slideDown 0.3s ease forwards;
+    }
+
+    .mobile-nav-popup.slideDown {
+        display: flex;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .mobile-nav-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobile-nav-links li {
+        padding: 12px 10px;
+        font-family: var(--font-body);
+        font-size: var(--body);
+        border-left: 4px solid transparent;
+        transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    .mobile-nav-links li:hover {
+        background-color: var(--section-background);
+    }
+
+    .mobile-nav-links li.active {
+        border-left: 4px solid var(--primary);
+        background-color: var(--section-background);
+    }
+
+    .popup-submit-btn {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .tag {
+        border: 2px solid var(--primary);
+        width: 100px;
+        border-radius: 10px;
+        text-align: center;
+        padding: 0px 20px;
+        color: var(--text);
+        background-color: var(--section-background);
+        transition: background-color 0.3s;
+    }
+
+    .tag a {
+        width: 100%;
+    }
+
+    .tag:hover {
+        background-color: var(--primary);
+        color: var(--background);
+    }
+
+    .toggle-tag {
+        border: 2px solid var(--primary);
+        border-radius: 10px;
+        padding: 0px 40px;
+        color: var(--text);
+        background-color: var(--section-background);
+        cursor: pointer;
+    }
+
+    .toggle-tag a {
+        display: flex;
+        padding: 15px 0px;
+    }
+
+    .toggle-tag.active {
+        background-color: var(--primary);
+        color: var(--text);
+
+        transition: all 0.2s ease;
+    }
+
+    .footer {
+        padding: 10px 10px;
+    }
+}
