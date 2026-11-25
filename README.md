@@ -47,8 +47,3 @@ HTML, CSS, JavaScript (no framework), Figma
 ## Running it locally
 
 No build step. Open `index.html` in your browser.
-
-## Team
-
-- **Yonathan Eivan Riyadi:** <!-- your part -->
-- <!-- Teammate name: role -->
